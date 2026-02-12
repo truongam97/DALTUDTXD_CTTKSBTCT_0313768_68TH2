@@ -1,15 +1,16 @@
-﻿<Window x:Class="CTTKSBTCT1.MainWindow"
+﻿<Window x:Class="CTTKSBTCT.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CTTKSBTCT1"
+        xmlns:local="clr-namespace:CTTKSBTCT"
         mc:Ignorable="d"
-        Title="Chương Trình thiết kế sàn bê tông cốt thép" Height="450" Width="800">
-    <Grid ShowGridLines="True">
+        Title="Chương Trình thiết kế sàn bê tông cốt thép" Height="526" Width="805">
+    <Grid Margin="10,10,0,10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="211*"/>
-            <RowDefinition Height="223*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Menu Height="35" VerticalAlignment="Top">
             <MenuItem Header="_File" Background="#FF1B6E97">
@@ -27,7 +28,7 @@
             </MenuItem>
             <MenuItem Header="_Dữ liệu"  Background="#FF1B6E97">
                 <MenuItem Header="Kết nối Etabs" Click="Etabs_Click">
-                    
+
                 </MenuItem>
                 <GroupBox Header="Vật liệu" >
                     <StackPanel>
@@ -45,14 +46,158 @@
                 <GroupBox Header="Mặt bằng"></GroupBox>
                 <GroupBox Header="Mặt đứng"></GroupBox>
             </MenuItem>
-       <MenuItem Header="_Thiết kế" Background="#FF1B6E97">
-               
+            <MenuItem Header="_Thiết kế" Background="#FF1B6E97">
+                <StackPanel>
+                    <Button Content="Tính toán" Click="Tinhtoan_Click"/>
+                    <Button Content="Xem kết quả" Click="Xemketqua_Click"/>
+                    <Button Content="Xuất" Click="Xuat_Click"/>
+                </StackPanel>
             </MenuItem>
             <MenuItem Header="_Trợ giúp" Background="#FF1B6E97">
                 <MenuItem Header="_Hướng dẫn sử dụng" Click="Help_Click"/>
                 <MenuItem Header="_Thông tin phần mềm" Click="About_Click"/>
             </MenuItem>
         </Menu>
-        
+        <GroupBox Header="Nhập Dữ Liệu" Margin="0,5,509,10" Padding="10" Foreground="#0056B3" FontWeight="Bold" Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0">
+                <StackPanel>
+                    <TextBlock Text="Thông Số Hình Học" Margin="0,5" Foreground="#0056B3"/>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Chiều dày sàn h:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" mm" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Chiều rộng dải tính b:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" mm" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Chiều cao làm việc h0:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" mm" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Separator Margin="0,10"/>
+
+                    <TextBlock Text="Thông Số Vật Liệu" Margin="0,5" Foreground="#0056B3"/>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Tên bê tông:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2"  Margin="5,0,0,0"/>
+                    </Grid>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Tên cốt thép:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2"  Margin="5,0,0,0"/>
+                    </Grid>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Cường độ bê tông Rb:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" MPa" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Cường độ thép Rs:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" MPa" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Separator Margin="0,10"/>
+
+                    <TextBlock Text="Nội Lực Thiết Kế" Margin="0,5" Foreground="#0056B3"/>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Moment Mx:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" kNm" Margin="5,0,0,0"/>
+                    </Grid>
+
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Moment My:"/>
+                        <TextBox Grid.Column="1" Text="" HorizontalContentAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text=" kNm" Margin="5,0,0,0"/>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </GroupBox>
+        <GroupBox Header="Kết Quả Tính Toán" Margin="275,0,0,0" Padding="5" Foreground="#0056B3" FontWeight="Bold" Grid.Row="1">
+            <DockPanel>
+                <DataGrid DockPanel.Dock="Top" Height="312" AutoGenerateColumns="False" CanUserAddRows="False" Background="White" SelectionChanged="DataGrid_SelectionChanged" Width="485">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Strip" Binding="{Binding Strip}" Width="*"/>
+                        <DataGridTextColumn Header="Moment (kNm)" Binding="{Binding Moment}" Width="*"/>
+                        <DataGridTextColumn Header="Diện Tích Thép As (cm²)" Binding="{Binding As}" Width="*"/>
+                        <DataGridTextColumn Header="Thép Bố Trí" Binding="{Binding Steel}" Width="*"/>
+                        <DataGridTextColumn Header="Kiểm Tra" Binding="{Binding Check}" Width="*">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Foreground" Value="Green"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                    <DataGrid.Items>
+                        <Control Template="{x:Null}"/>
+                    </DataGrid.Items>
+                </DataGrid>
+                <TextBlock Text="Tính toán hoàn thành! Kết quả đạt yêu cầu." FontWeight="Normal" Foreground="Black" DockPanel.Dock="Bottom" Height="23"/>
+            </DockPanel>
+        </GroupBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Tính Toán" Width="120" Height="35" Background="#0078D7" Foreground="White" Margin="5"/>
+            <Button Content="Xuất Kết Quả Ra Excel" Width="150" Height="35" Margin="5"/>
+            <Button Content="Làm Mới" Width="120" Height="35" Margin="5"/>
+        </StackPanel>
+
+
     </Grid>
 </Window>
+
