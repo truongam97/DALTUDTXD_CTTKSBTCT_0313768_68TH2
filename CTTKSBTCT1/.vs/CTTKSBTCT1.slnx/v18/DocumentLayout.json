@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\DALTUDTXD_CTTKSBTCT_0313768_68TH2\\CTTKSBTCT1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E6B800-5E0F-452E-BD63-5CF966245DE6}|CTTKSBTCT1.csproj|c:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\daltudtxd_cttksbtct_0313768_68th2\\cttksbtct1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F1E6B800-5E0F-452E-BD63-5CF966245DE6}|CTTKSBTCT1.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\DALTUDTXD_CTTKSBTCT_0313768_68TH2\\CTTKSBTCT1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\\u0111\u1ED3 \u00E1n l\u1EADp tr\u00ECnh\\DALTUDTXD_CTTKSBTCT_0313768_68TH2\\CTTKSBTCT1\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T19:05:45.904Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

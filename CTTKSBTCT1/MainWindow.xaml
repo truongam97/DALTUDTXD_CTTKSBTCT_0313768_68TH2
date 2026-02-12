@@ -1,0 +1,58 @@
+﻿<Window x:Class="CTTKSBTCT1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CTTKSBTCT1"
+        mc:Ignorable="d"
+        Title="Chương Trình thiết kế sàn bê tông cốt thép" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="211*"/>
+            <RowDefinition Height="223*"/>
+        </Grid.RowDefinitions>
+        <Menu Height="35" VerticalAlignment="Top">
+            <MenuItem Header="_File" Background="#FF1B6E97">
+                <MenuItem Header="_New" HorizontalAlignment="Left" Height="30" Click="New_Click"/>
+                <MenuItem Header="_Open" HorizontalAlignment="Left" Height="30" Click="Open_Click"/>
+                <MenuItem Header="_Save" HorizontalAlignment="Left" Height="30" Click="Save_Click"/>
+                <MenuItem Header="_Exit" HorizontalAlignment="Left" Height="30" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Edit" Background="#FF1B6E97">
+                <MenuItem Header="_Undo" Click="Undo_Click"/>
+                <MenuItem Header="_Redo" Click="Redo_Click"/>
+                <MenuItem Header="_Cut" Click="Cut_Click"/>
+                <MenuItem Header="_Copy" Click="Copy_Click"/>
+                <MenuItem Header="_Paste" Click="Paste_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Dữ liệu"  Background="#FF1B6E97">
+                <MenuItem Header="Kết nối Etabs" Click="Etabs_Click">
+                    
+                </MenuItem>
+                <GroupBox Header="Vật liệu" >
+                    <StackPanel>
+                        <Button Content="Thêm vật liệu" Click="AddMaterial_Click"/>
+                        <Button Content="Sửa vật liệu" Click="EditMaterial_Click"/>
+                        <Button Content="Xóa vật liệu" Click="DeleteMaterial_Click"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Thông số" >
+                    <StackPanel>
+                        <Button Content="Thông số đầu vào" Click="thongsodauvao_Click"/>
+                        <Button Content="Thông số thiết kế" Click="thongsothietke_Click"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Mặt bằng"></GroupBox>
+                <GroupBox Header="Mặt đứng"></GroupBox>
+            </MenuItem>
+       <MenuItem Header="_Thiết kế" Background="#FF1B6E97">
+               
+            </MenuItem>
+            <MenuItem Header="_Trợ giúp" Background="#FF1B6E97">
+                <MenuItem Header="_Hướng dẫn sử dụng" Click="Help_Click"/>
+                <MenuItem Header="_Thông tin phần mềm" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        
+    </Grid>
+</Window>

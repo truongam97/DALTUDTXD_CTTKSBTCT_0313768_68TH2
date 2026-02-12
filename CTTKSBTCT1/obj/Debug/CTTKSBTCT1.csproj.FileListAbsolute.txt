@@ -1,0 +1,6 @@
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\CTTKSBTCT1.csproj.AssemblyReference.cache
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\MainWindow.g.cs
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\view\ketnoietabsView.g.cs
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\App.g.cs
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\CTTKSBTCT1_MarkupCompile.cache
+C:\đồ án lập trình\DALTUDTXD_CTTKSBTCT_0313768_68TH2\CTTKSBTCT1\obj\Debug\CTTKSBTCT1_MarkupCompile.lref
